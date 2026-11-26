@@ -1,26 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Sesión en seco – 40 min</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101522"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Entrenamiento · Sesión en seco</title><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-192.png"><link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div id="app">
-    <h1>Sesión en seco – 40 min</h1>
-
-    <h2 id="bloque"></h2>
-    <p id="vuelta"></p>
-    <h3 id="ejercicio"></h3>
-    <div id="tiempo">00:00</div>
-
-    <button id="start">▶ Iniciar</button>
-    <button id="next" disabled>⏭ Siguiente</button>
-    <button id="pause" disabled>⏸ Pausa</button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<main class="app">
+<header class="topbar"><div class="brand"><span class="brand-mark">✦</span><div><strong>ENTRENA</strong><small>SESIÓN EN SECO</small></div></div><span class="duration">40 MIN</span></header>
+<section class="intro"><p class="eyebrow">TU ENTRENAMIENTO</p><h1>Hoy toca<br><span>dar lo mejor.</span></h1></section>
+<section class="workout-card">
+<div class="card-meta"><span id="block-number">BLOQUE 1</span><span id="vuelta">Vuelta 1 de 1</span></div>
+<div class="exercise-stage" id="stage">
+<div class="stage-glow"></div>
+<svg class="figure pose-idle" id="figure" viewBox="0 0 300 300" role="img" aria-label="Figura 3D demostrando el ejercicio">
+<defs><linearGradient id="skin" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffe0bd"/><stop offset=".55" stop-color="#d99a70"/><stop offset="1" stop-color="#9d604d"/></linearGradient><linearGradient id="shirt" x1="0" x2="1"><stop stop-color="#56e0c0"/><stop offset="1" stop-color="#168e91"/></linearGradient><linearGradient id="pants" x1="0" x2="1"><stop stop-color="#42506d"/><stop offset="1" stop-color="#202b43"/></linearGradient></defs>
+<ellipse cx="150" cy="270" rx="76" ry="12" fill="#060a12" opacity=".55"/>
+<g id="person">
+<g id="legs"><path class="limb leg left" d="M137 177 Q125 210 119 246 L111 260" fill="none" stroke="url(#pants)" stroke-width="23" stroke-linecap="round"/><path class="limb leg right" d="M164 177 Q177 211 183 246 L191 260" fill="none" stroke="url(#pants)" stroke-width="23" stroke-linecap="round"/><path d="M107 261h22q8 0 8 7h-34q-5-3 4-7M185 261h22q8 0 8 7h-34q-5-3 4-7" fill="#d9e3ee"/></g>
+<path d="M126 102 Q150 91 174 102 L183 177 Q151 190 117 177Z" fill="url(#shirt)"/>
+<g id="arms"><path class="limb arm left" d="M126 112 Q105 130 102 153 L91 174" fill="none" stroke="url(#skin)" stroke-width="15" stroke-linecap="round"/><path class="limb arm right" d="M174 112 Q195 130 198 153 L209 174" fill="none" stroke="url(#skin)" stroke-width="15" stroke-linecap="round"/></g>
+<path d="M139 91h22v22h-22z" fill="url(#skin)"/><ellipse cx="150" cy="70" rx="25" ry="30" fill="url(#skin)"/><path d="M126 68q1-35 27-32 24 2 23 30-10-12-24-14-12 10-26 16" fill="#263247"/>
+</g></svg>
+<div class="exercise-label"><span class="live-dot"></span><span id="state-label">PREPARADO</span></div>
+</div>
+<div class="exercise-info"><p class="eyebrow">EJERCICIO ACTUAL</p><h2 id="ejercicio">Preparado para empezar</h2><p id="hint">Pulsa iniciar cuando estés listo.</p></div>
+<div class="timer-wrap"><div class="timer-ring" id="timer-ring"><div class="timer-inner"><strong id="tiempo">00:00</strong><span id="timer-caption">TIEMPO RESTANTE</span></div></div></div>
+<div class="progress-row"><span id="progress-text">PREPARACIÓN</span><span id="progress-count">0 / 0</span></div><div class="progress-track"><div id="progress-bar"></div></div>
+<div class="controls"><button id="start" class="primary">▶ <span>Iniciar sesión</span></button><button id="pause" class="secondary" disabled>Ⅱ</button><button id="next" class="secondary" disabled>⏭</button></div>
+<p class="control-note">Puedes pausar o avanzar manualmente en cualquier momento.</p>
+</section>
+<footer><span>RESPIRA · CONCÉNTRATE · AVANZA</span><span id="status">LISTO PARA EMPEZAR</span></footer>
+</main><script src="script.js"></script>
+</body></html>
